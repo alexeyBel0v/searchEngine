@@ -14,13 +14,22 @@ spring:
         dialect: org.hibernate.dialect.MySQL8Dialect
     hibernate:
       ddl-auto: update
-      show-sql: true
+      generate-ddl: true
+    #  show-sql: true
+    open-in-view: true
+  # logs
+  logging:
+    level:
+      org.hibernate.SQL: info
+
 
 indexing-settings:
   sites:
-    - url: https://www.lenta.ru
-      name: Лента.ру
-    - url: https://www.skillbox.ru
-      name: Skillbox
-    - url: https://www.playback.ru
+    #        - url: https://www.lenta.ru
+    #          name: Лента.ру
+    #        - url: https://www.dimonvideo.ru
+    #          name: DimonVideo
+    - url: http://www.playback.ru
       name: PlayBack.Ru
+    - url: http://radiomv.ru
+      name: radiomv
